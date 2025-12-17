@@ -8,5 +8,10 @@ Think of functions as a machine that takes some input, does some operations on i
 function greet() {
   console.log("Hello, Mahesh!");
 }
+```
 
-In this example, we have declared a function called greet. Inside that function, we have a console.log that logs the message Hello, Jessica!. If we tried to run this code, we would not see the message appear in the console. This is because we need to call the function.
+In this example, we have declared a function called greet.
+
+Inside that function, we have a console.log that logs the message Hello, Jessica!. 
+
+If we tried to run this code, we would not see the message appear in the console. This is because we need to call the function.
