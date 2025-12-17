@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Function – Animated Explanation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #020617;
+      padding: 24px;
+      border-radius: 16px;
+      width: 720px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .code {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 16px;
+      font-family: "Courier New", monospace;
+      font-size: 16px;
+      line-height: 1.6;
+      position: relative;
+    }
+
+    .highlight {
+      background: rgba(56, 189, 248, 0.15);
+      border-left: 4px solid #38bdf8;
+      padding-left: 8px;
+      animation: glow 1s ease-in-out;
+    }
+
+    @keyframes glow {
+      0% { background: rgba(56, 189, 248, 0.05); }
+      50% { background: rgba(56, 189, 248, 0.25); }
+      100% { background: rgba(56, 189, 248, 0.15); }
+    }
+
+    .explanation {
+      margin-top: 16px;
+      min-height: 60px;
+      background: #020617;
+      border: 1px dashed #334155;
+      border-radius: 12px;
+      padding: 12px;
+      color: #cbd5f5;
+    }
+
+    button {
+      margin-top: 16px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      background: #38bdf8;
+      color: #020617;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #0ea5e9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>JavaScript Function – Animated Explanation</h1>
+
+    <div class="code">
+      <div id="line1">function <strong>add</strong>(a, b) {</div>
+      <div id="line2">&nbsp;&nbsp;return a + b;</div>
+      <div id="line3">}</div>
+      <br />
+      <div id="line4">let result = add(5, 3);</div>
+      <div id="line5">console.log(result);</div>
+    </div>
+
+    <div id="explanation" class="explanation">
+      Click "Next" to see how a JavaScript function works step by step.
+    </div>
+
+    <button onclick="nextStep()">Next ▶</button>
+  </div>
+
+  <script>
+    const steps = [
+      {
+        lines: ["line1"],
+        text: "This is a FUNCTION declaration. 'add' is the function name and (a, b) are parameters."
+      },
+      {
+        lines: ["line2"],
+        text: "The function body runs when the function is called. Here it RETURNS a + b."
+      },
+      {
+        lines: ["line3"],
+        text: "This curly brace ends the function definition."
+      },
+      {
+        lines: ["line4"],
+        text: "Now the function is CALLED with arguments 5 and 3."
+      },
+      {
+        lines: ["line2", "line5"],
+        text: "The function executes, returns 8, and the result is printed to the console."
+      }
+    ];
+
+    let currentStep = 0;
+
+    function clearHighlights() {
+      document.querySelectorAll('.highlight').forEach(el => {
+        el.classList.remove('highlight');
+      });
+    }
+
+    function nextStep() {
+      clearHighlights();
+
+      if (currentStep >= steps.length) {
+        currentStep = 0;
+      }
+
+      const step = steps[currentStep];
+
+      step.lines.forEach(id => {
+        document.getElementById(id).classList.add('highlight');
+      });
+
+      document.getElementById('explanation').innerText = step.text;
+      currentStep++;
+    }
+  </script>
+</body>
+</html>
