@@ -63,7 +63,7 @@ function calculateSum(num1, num2) {
 
 console.log(calculateSum(3, 4)); // 7
 
-```js
+```
 
 Often times you will be using the return statement, because you can use that value that was output from the function later on in your code.
 
