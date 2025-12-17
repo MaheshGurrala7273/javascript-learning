@@ -24,6 +24,7 @@ function greet() {
 }
 
 greet(); // "Hello, Mahesh!"
+
 ```
 Now the message of Hello, Mahesh! will be logged to the console. But what if we wanted the message to say Hello, Ramesh! or Hello, Suresh!? We don't want to write a new function each time we greet a different user. Instead, we can create a reusable function that uses function parameters and arguments.
 
@@ -37,7 +38,7 @@ function greet(name) {
 greet("Ramesh"); // Hello, Ramesh!
 greet("Suresh"); // Hello, Suresh!
 
-```js
+```
 
 The name serves as the parameter while the strings Ramesh and Suresh serve as the arguments. Now we have a reusable function that can be used dozens of times throughout our code with different arguments.
 
@@ -50,6 +51,7 @@ function doSomething() {
 
 let result = doSomething();
 console.log(result); // undefined
+
 ```
 
 If you need your function to return a specific value, then you will need to use the return statement. Here is an example of using a return statement to return the sum of two values:
@@ -60,6 +62,7 @@ function calculateSum(num1, num2) {
 }
 
 console.log(calculateSum(3, 4)); // 7
+
 ```js
 
 Often times you will be using the return statement, because you can use that value that was output from the function later on in your code.
@@ -67,11 +70,13 @@ Often times you will be using the return statement, because you can use that val
 So far, we've been working with named functions, but you can also create what's called an anonymous function. An anonymous function is a function without a name that can be assigned to a variable like this:
 
 ```js
+
 const sum = function (num1, num2) {
   return num1 + num2;
 };
 
 console.log(sum(3, 4)); // 7
+
 ```
 
 In this example, we have a const variable called sum and we are assigning it an anonymous function that returns the sum of num1 and num2. We are then able to call sum and pass in the numbers 3 and 4 to get the result of 7.
@@ -79,6 +84,7 @@ In this example, we have a const variable called sum and we are assigning it an 
 Functions support default parameters, allowing you to set default values for parameters. These default values are used if the function is called without an argument for that parameter. Here's an example:
 
 ```js
+
 function greetings(name = "Guest") {
   console.log("Hello, " + name + "!");
 }
