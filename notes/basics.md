@@ -4,6 +4,6 @@
 - `let` – block scoped
 - `const` – cannot be reassigned
 
-## Example
+```js
 let age = 25;
 const name = "Mahesh";
