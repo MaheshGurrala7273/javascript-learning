@@ -12,6 +12,6 @@ function greet() {
 
 In this example, we have declared a function called greet.
 
-Inside that function, we have a console.log that logs the message Hello, Jessica!. 
+Inside that function, we have a console.log that logs the message Hello, Mahesh!. 
 
 If we tried to run this code, we would not see the message appear in the console. This is because we need to call the function.
